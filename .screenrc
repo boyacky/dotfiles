@@ -1,0 +1,22 @@
+# コマンド
+escape "^Tt"
+
+# ハングアップしたときにscreenは自動的にデタッチ
+autodetach on
+
+# 画面の一番下の行を反転させてハードステータス表示
+hardstatus alwayslastline "%{= gk}[%m/%d %02c:%s] %{gW} %-w%{= kg}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME (%l) "
+#hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+
+# スクロールバッファ
+defscrollback 100000
+
+# 起動時に著作権表示
+startup_message off
+
+#分割サイズ変更
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
