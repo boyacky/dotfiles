@@ -11,3 +11,4 @@
 !/.screenrc
 !/.gitignore
 !/.gitmodules
+!/create_link.sh
