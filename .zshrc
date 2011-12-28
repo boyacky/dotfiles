@@ -366,6 +366,9 @@ function chpwd() {
 # 残ってしまうのでせめてcdコマンド以外のコマンドでも実行前にタイトルを変更
 preexec () {
   changetitle
+
+  #screen のタイトルを最終実行コマンドに変更
+  [ ${STY} ] && echo -ne "\ek${1%% *}\e\\"
 }
 
 export GIT_HOOKS_HOME=/usr/share/git-core/Git-Hooks
