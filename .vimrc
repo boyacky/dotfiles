@@ -3,10 +3,11 @@ call pathogen#runtime_append_all_bundles()
 " .vim/bunle/plugin_nameのヘルプを読み込めるようにする
 call pathogen#helptags()
 " phpmanual読み込み
-"let g:ref_phpmanual_path = $HOME . '/phpmanual'
+let g:ref_phpmanual_path = $HOME . '/.dotfiles/phpmanual'
 " 入力補完
 let g:neocomplcache_enable_at_startup = 1
 
+set smartindent
 set textwidth=0
 set backspace=indent,eol,start
 set nowrap
