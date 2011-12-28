@@ -1,5 +1,5 @@
 # コマンド
-escape "^Tt"
+escape "^Jj"
 
 # ハングアップしたときにscreenは自動的にデタッチ
 autodetach on
