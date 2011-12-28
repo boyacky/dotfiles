@@ -286,7 +286,7 @@ alias his='history | tail'
 if [[ $use_color == 'true' ]]; then
   if [[ $os == 'mac' || $os == 'bsd' ]]; then
     #alias ls='command ls -AFG'
-    alias ls='command ls'
+    alias ls='command ls -G'
   elif [[ $os == 'sun' ]]; then
     #alias ls='command ls -AF'
     alias ls='command ls'
