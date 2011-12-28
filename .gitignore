@@ -3,10 +3,12 @@
 # さらにdotfileを無視
 /.*
 # 無視したくないファイルを![filename]で指定]
+!/.zshrc
 !/.bashrc
 !/.bash_profile
 !/.vim
 !/.vimrc
+!/.gvimrc
 !/.screenrc
 !/.gitignore
 !/.gitmodules
