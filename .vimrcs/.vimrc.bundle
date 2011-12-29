@@ -1,0 +1,12 @@
+"vunlde.vimで管理してるpluginを読み込む
+
+filetype off
+set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+" 追加するプラグイン
+Bundle 'neocomplcache'
+
+
+filetype plugin indent on
