@@ -1,0 +1,13 @@
+[user]
+  name = Keiitiro Yamaoka
+  email = boyacky.mail@gmail.com
+[color]
+    ui = auto
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+[core]
+  pager = lv -c
+[http]
+  sslVerify = false

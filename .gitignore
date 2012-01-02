@@ -14,5 +14,6 @@
 !/.gitignore
 !/.gitmodules
 !/create_link.sh
+!/.gitconfig
 # vim内のbundleを無視
 /.vim/bundle
