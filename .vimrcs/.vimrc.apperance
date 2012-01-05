@@ -20,12 +20,12 @@ augroup cch
   autocmd WinEnter,BufRead * set cursorline
 augroup END
 
+" 色指定
 :hi clear CursorLine
 :hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
+highlight CursorLine ctermbg=darkblue guibg=black
 
 " コマンド実行中は再描画しない
 :set lazyredraw
-" 高速ターミナル接続を行う
+"" 高速ターミナル接続を行う
 :set ttyfast
-

@@ -20,5 +20,5 @@ source ~/.dotfiles/.vimrcs/.vimrc.colors
 source ~/.dotfiles/.vimrcs/.vimrc.editing
 "エンコーディング関連
 source ~/.dotfiles/.vimrcs/.vimrc.encoding
-"プラグインに依存するアレ
+"プラグインに依存する設定
 source ~/.dotfiles/.vimrcs/.vimrc.plugins_setting

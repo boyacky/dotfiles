@@ -8,5 +8,4 @@ call vundle#rc()
 " 追加するプラグイン
 Bundle 'neocomplcache'
 
-
 filetype plugin indent on
