@@ -11,6 +11,11 @@ set display=uhex      " 印字不可能文字を16進数で表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
 
+" コマンド実行中は再描画しない
+:set lazyredraw
+"" 高速ターミナル接続を行う
+:set ttyfast
+
 "" カーソル行をハイライト
 "set cursorline
 "" カレントウィンドウにのみ罫線を引く
@@ -20,15 +25,11 @@ match ZenkakuSpace /　/
 "  autocmd WinEnter,BufRead * set cursorline
 "augroup END
 
-" 色指定
-:hi clear CursorLine
-:hi CursorLine gui=underline
-highlight CursorLine ctermbg=darkblue guibg=black
+"" 色指定
+":hi clear CursorLine
+":hi CursorLine gui=underline
+"highlight CursorLine ctermbg=darkblue guibg=black
 
-" コマンド実行中は再描画しない
-:set lazyredraw
-"" 高速ターミナル接続を行う
-:set ttyfast
 
 "-------------------------------------------------------------------------------
 " カラー関連 Colors
@@ -57,3 +58,4 @@ syntax enable
 hi Pmenu ctermbg=white ctermfg=darkgray
 hi PmenuSel ctermbg=blue ctermfg=white
 hi PmenuSbar ctermbg=0 ctermfg=9
+
