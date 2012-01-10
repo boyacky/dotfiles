@@ -185,7 +185,7 @@ if whence -p lv 2>&1 > /dev/null; then
 fi
 
 # default path
-export PATH=/usr/bin:/bin
+export PATH=/usr/bin:/bin:/usr/local/bin
 
 # for Mac ports
 if [[ $os == 'mac' ]]; then
@@ -347,10 +347,10 @@ function changetitle {
   case "${TERM}" in
     xterm*|kterm*|rxvt*)
       echo -ne "\033]0;${title}\007"
-    ;;  
+    ;;
     screen*)
       echo -ne "\033P\033]0;${title}\007\033\\"
-    ;;  
+    ;;
   esac
 }
 
