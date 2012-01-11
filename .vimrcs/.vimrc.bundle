@@ -2,10 +2,11 @@
 
 filetype off
 set rtp+=~/.vim/vundle.git/
-set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " 追加するプラグイン
 Bundle 'neocomplcache'
+Bundle 'soh335/vim-symfony'
+Bundle 'thinca/vim-ref'
 
 filetype plugin indent on
