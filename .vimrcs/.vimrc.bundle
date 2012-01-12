@@ -8,5 +8,6 @@ call vundle#rc()
 Bundle 'neocomplcache'
 Bundle 'soh335/vim-symfony'
 Bundle 'thinca/vim-ref'
+Bundle 'grep.vim'
 
 filetype plugin indent on

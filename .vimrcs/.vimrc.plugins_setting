@@ -2,6 +2,28 @@
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
 
+" ------------------------------------
+"  " grep.vim
+"  "------------------------------------
+" :Gb <args> でGrepBufferする
+command! -nargs=1 Gb :GrepBuffer <args>
+" カーソル下の単語をGrepBufferする
+nnoremap <C-g><C-b> :<C-u>GrepBuffer<Space><C-r><C-w><Enter>
+
+" :Gr <args>でカレントディレクトリ以下を再帰的にgrepする
+command! -nargs=1 Gr :Rgrep <args> *<Enter><CR>
+" カーソル下の単語をgrepする
+nnoremap <silent> <C-g><C-r> :<C-u>Rgrep<Space><C-r><C-w> *<Enter><CR>
+
+let Grep_Skip_Dirs = '.svn .git log cache'
+let Grep_Skip_Files = '*.bak *~'
+
+"------------------------------------
+" vim-ref.vim
+"------------------------------------
+"マニュアルpath指定
+let g:ref_phpmanual_path = $HOME. '/manual/php' "php
+
 "------------------------------------
 " neocomplecache.vim
 "------------------------------------
@@ -44,6 +66,8 @@ let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
 " スニペット
 imap <C-k> <Plug>(neocomplcache_snippets_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
+" スニペットファイル変更
+noremap es :<C-u>NeoComplCacheEditSnippets<CR>
 
 " 補完を選択しpopupを閉じる
 inoremap <expr><C-y> neocomplcache#close_popup()
