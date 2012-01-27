@@ -1,27 +1,39 @@
 "-------------------------------------------------------------------------------
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
+
 " ------------------------------------
 " unite.vim
 "------------------------------------
-" バッファ一覧
-nnoremap <silent> ;ub :<C-u>Unite buffer<CR>
-" ファイル一覧
-nnoremap <silent> ;uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-" レジスタ一覧
-nnoremap <silent> ;ur :<C-u>Unite -buffer-name=register register<CR>
-" 最近使用したファイル一覧
-nnoremap <silent> ;um :<C-u>Unite file_mru<CR>
-" 常用セット
-nnoremap <silent> ;uu :<C-u>Unite buffer file_mru<CR>
+" The prefix key.
+nnoremap [unite] <Nop>
+nmap f [unite]
+
 " 全部乗せ
-nnoremap <silent> ;ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+" 常用セット
+nnoremap <silent> [unite]u :<C-u>Unite buffer file_mru<CR>
+" ファイル一覧
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+" バッファ一覧
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+" 最近使用したファイル一覧
+nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()"{{{
+  " ESCキーを2回押すと終了する
+  nmap <buffer> <ESC>      <Plug>(unite_exit)
+  nmap <buffer> <ESC><ESC> <Plug>(unite_exit)
+endfunction"}}}
+
+let g:unite_source_file_mru_limit = 20
 
 " ------------------------------------
 " unite-outline.vim
 "------------------------------------
 " 垂直分割
-nnoremap <silent> ;ui :<C-u>Unite -vertical -winwidth=40 outline<CR>
+nnoremap <silent> [unite]o :<C-u>Unite -vertical -winwidth=40 outline<CR>
 
 " ------------------------------------
 " grep.vim
@@ -111,3 +123,4 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
+
