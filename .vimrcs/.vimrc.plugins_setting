@@ -21,7 +21,7 @@ nnoremap <silent> ;ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mr
 " unite-outline.vim
 "------------------------------------
 " 垂直分割
-command! Uo :Unite -vertical -winwidth=40 outline <args>
+nnoremap <silent> ;ui :<C-u>Unite -vertical -winwidth=40 outline<CR>
 
 " ------------------------------------
 " grep.vim
