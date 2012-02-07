@@ -5,12 +5,19 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " 追加するプラグイン
+
 Bundle 'neocomplcache'
-Bundle 'soh335/vim-symfony'
 Bundle 'thinca/vim-ref'
 Bundle 'grep.vim'
+
 Bundle 'unite.vim'
 Bundle 'h1mesuke/unite-outline'
-Bundle 'opsplorer'
+
+Bundle 'smartchr'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+
+Bundle 'soh335/vim-symfony'
 
 filetype plugin indent on

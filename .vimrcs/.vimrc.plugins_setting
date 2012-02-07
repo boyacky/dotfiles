@@ -3,9 +3,37 @@
 "-------------------------------------------------------------------------------
 
 " ------------------------------------
-" opsplorer
+" smartchr
 "------------------------------------
-command! Exp :Opsplore <args>
+inoremap <expr> = smartchr#one_of(' = ',  ' == ',  ' === ',  '=')
+
+" ------------------------------------
+" NERDTree
+"------------------------------------
+command Exp :NERDTreeToggle <args>
+" 隠しファイル表示
+let NERDTreeShowHidden=1
+" サイズ指定
+let NERDTreeWinSize=60
+" 除外指定
+let g:NERDTreeIgnore=['\.svn',  '\.pyc']
+
+" ------------------------------------
+" NERDTree
+"------------------------------------
+" デフォルトキーを無効化
+let g:NERDCreateDefaultMappings  =  0
+let g:NERDSpaceDelims  =  1
+
+" コメント
+nmap <Leader>cc <Plug>NERDCommenterAlignLeft
+vmap <Leader>c  <Plug>NERDCommenterComment
+nmap <Leader>C  <Plug>NERDCommenterToEOL
+vmap <Leader>C  <Plug>NERDCommenterAlignLeft
+
+" アンコメント
+nmap <Leader>u  <Plug>NERDCommenterUncomment
+vmap <Leader>u  <Plug>NERDCommenterUncomment
 
 " ------------------------------------
 " unite.vim
