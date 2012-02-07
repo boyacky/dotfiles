@@ -11,5 +11,6 @@ Bundle 'thinca/vim-ref'
 Bundle 'grep.vim'
 Bundle 'unite.vim'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'opsplorer'
 
 filetype plugin indent on
