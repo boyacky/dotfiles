@@ -11,7 +11,7 @@ let NERDTreeShowHidden=1
 " サイズ指定
 let NERDTreeWinSize=60
 " 除外指定
-let g:NERDTreeIgnore=['\.svn',  '\.pyc']
+let g:NERDTreeIgnore=['\.svn',  '\.git']
 
 " ------------------------------------
 " NERDTree
