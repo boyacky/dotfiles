@@ -13,8 +13,6 @@ Bundle 'grep.vim'
 Bundle 'unite.vim'
 Bundle 'h1mesuke/unite-outline'
 
-Bundle 'smartchr'
-
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 
