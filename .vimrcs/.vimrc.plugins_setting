@@ -132,8 +132,6 @@ noremap es :<C-u>NeoComplCacheEditSnippets<CR>
 
 " 補完を選択しpopupを閉じる
 inoremap <expr><C-y> neocomplcache#close_popup()
-" 補完をキャンセルしpopupを閉じる
-inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 " C-nでneocomplcache補完
 inoremap <expr><C-n>  pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
