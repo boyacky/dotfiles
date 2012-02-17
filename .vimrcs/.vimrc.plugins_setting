@@ -20,6 +20,9 @@ let g:NERDTreeIgnore=['\.svn',  '\.git']
 let g:NERDCreateDefaultMappings  =  0
 let g:NERDSpaceDelims  =  1
 
+" ------------------------------------
+" NERDCommenter
+"------------------------------------
 " コメント
 nmap <Leader>cc <Plug>NERDCommenterAlignLeft
 vmap <Leader>c  <Plug>NERDCommenterComment
