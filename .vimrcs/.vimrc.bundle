@@ -6,11 +6,12 @@ call vundle#rc()
 
 " 追加するプラグイン
 
-Bundle 'neocomplcache'
-Bundle 'thinca/vim-ref'
-Bundle 'grep.vim'
+Bundle 'Shougo/neocomplcache'
 
-Bundle 'unite.vim'
+Bundle 'thinca/vim-ref'
+Bundle 'vim-scripts/grep.vim'
+
+Bundle 'Shougo/unite.vim'
 Bundle 'h1mesuke/unite-outline'
 
 Bundle 'scrooloose/nerdtree'

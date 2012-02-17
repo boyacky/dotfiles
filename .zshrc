@@ -285,18 +285,18 @@ alias history='builtin history -Di'
 alias his='history | tail'
 if [[ $use_color == 'true' ]]; then
   if [[ $os == 'mac' || $os == 'bsd' ]]; then
-    #alias ls='command ls -AFG'
-    alias ls='command ls -G'
+    alias ls='command ls -AFG'
+    #alias ls='command ls -G'
   elif [[ $os == 'sun' ]]; then
-    #alias ls='command ls -AF'
-    alias ls='command ls'
+    alias ls='command ls -AF'
+    #alias ls='command ls'
   else
-    #alias ls='command ls -AF --color=auto --show-control-chars'
-    alias ls='command ls --color=auto --show-control-chars'
+    alias ls='command ls -AF --color=auto --show-control-chars'
+    #alias ls='command ls --color=auto --show-control-chars'
   fi
 else
-  #alias ls='command ls -AF'
-  alias ls='command ls'
+  alias ls='command ls -AF'
+  #alias ls='command ls'
 fi
 alias sl='ls'
 alias ln='ln -n'
