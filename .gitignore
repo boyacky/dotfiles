@@ -15,5 +15,6 @@
 !/.gitmodules
 !/create_link.sh
 !/.gitconfig
+!/.tmux.conf
 # vim内のbundleを無視
 /.vim/bundle
