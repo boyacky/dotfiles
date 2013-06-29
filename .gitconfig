@@ -50,7 +50,7 @@
   # diff関連
   logall = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
   logal = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-  loga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  loga = log --graph --all --color --pretty='%x09%h %s %C(yellow)[%an]%Creset %Cred%d%Creset'
   lga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
   df = diff
   dif = diff
@@ -84,4 +84,6 @@
   ticket = ticket
   rma = "!f() { git ls-files --deleted | sort -u }; git rm `f`"
   rebase-status = "!f() { GIT_DIR=`git rev-parse --git-dir`;if [ -d $GIT_DIR/rebase-merge -o -f $GIT_DIR/rebase-apply/rebasing ]; then if [ -f $GIT_DIR/rebase-merge/interactive ]; then br='rebase-i'; else br='rebase-m'; fi; echo 'rebasing...('$br')'; else echo 'not rebasing.'; fi }; f"
+  i = issue m
+  ia = issue
 # github config in /etc/gitconfig

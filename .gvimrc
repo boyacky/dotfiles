@@ -8,7 +8,7 @@ if has('gui_macvim')
   set visualbell t_vb=         " ビープ音なし
   set nowrapscan               " 検索をファイルの先頭へループしない
   set transparency=20          " 透明度を指定
-  set guifont=Osaka-Mono:h13   " フォント指定
+  set guifont=Ricty:h13        " フォント指定
   set lines=50 columns=150     " ウィンドウサイズをセット はみだした部分は自動的に修正させて画面いっぱいに表示させる
 endif
 
@@ -45,7 +45,7 @@ inoremap '' ''<LEFT>
 "コマンドの入力状況の表示
 set showcmd
 " バックアップなし
-set nobackup 
+set nobackup
 
 " 文字コード関連
 set encoding=utf-8
