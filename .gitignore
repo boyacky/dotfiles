@@ -13,6 +13,7 @@
 !/.screenrc
 !/.gitignore
 !/.gitmodules
+!/.git_template
 !/create_link.sh
 !/.gitconfig
 !/.tmux.conf

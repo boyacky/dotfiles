@@ -86,4 +86,9 @@
   rebase-status = "!f() { GIT_DIR=`git rev-parse --git-dir`;if [ -d $GIT_DIR/rebase-merge -o -f $GIT_DIR/rebase-apply/rebasing ]; then if [ -f $GIT_DIR/rebase-merge/interactive ]; then br='rebase-i'; else br='rebase-m'; fi; echo 'rebasing...('$br')'; else echo 'not rebasing.'; fi }; f"
   i = issue m
   ia = issue
+  prepush = "! gitprepush.sh"
+[init]
+  templatedir = ~/.git_template
+[pre-push]
+#  cmd = git log --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
 # github config in /etc/gitconfig
