@@ -19,4 +19,8 @@ Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'soh335/vim-symfony'
 
+Bundle 'jQuery'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'cakebaker/scss-syntax.vim'
+
 filetype plugin indent on

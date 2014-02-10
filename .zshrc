@@ -372,3 +372,4 @@ preexec () {
 }
 
 export GIT_HOOKS_HOME=/usr/share/git-core/Git-Hooks
+export PATH=/home/yamaoka/.nodebrew/current/bin:/home/yamaoka/local/bin:/usr/bin:/bin:/usr/local/bin:/Applications/adt-bundle-mac/sdk/platform-tools:/Applications/adt-bundle-mac/sdk/tools:/sbin:/usr/sbin
