@@ -90,5 +90,5 @@
 [init]
   templatedir = ~/.git_template
 [pre-push]
-#  cmd = git log --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+  cmd = git log --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset' {}
 # github config in /etc/gitconfig

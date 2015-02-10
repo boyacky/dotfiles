@@ -26,31 +26,34 @@ z40=0000000000000000000000000000000000000000
 
 IFS=' '
 while read local_ref local_sha remote_ref remote_sha; do
-	if [ "$local_sha" = $z40 ]; then
-		# Handle delete
+    if [ "$local_sha" = $z40 ]; then
+        # Handle delete
     :
-	else
-		if [ "$remote_sha" = $z40 ]; then
-			# New branch, examine all commits
-			range="$local_sha"
-		else
-			# Update to existing branch, examine new commits
-			range="$remote_sha..$local_sha"
-		fi
+    else
+        if [ "$remote_sha" = $z40 ]; then
+            # New branch, examine all commits
+            #range="$local_sha"
+            :
+        else
+            # Update to existing branch, examine new commits
+            range="$remote_sha..$local_sha"
+        fi
 
-		cmd=`git config pre-push.cmd`
-		if [ x"$cmd" = x"" ]; then
-			cmd='git log --date=short --pretty=format:"%h %ad %an %s" {}'
-		fi
-		eval "echo $range | xargs -I {} $cmd | cat"
+        cmd=`git config pre-push.cmd`
+        if [ x"$cmd" = x"" ]; then
+            cmd='git log --date=short --pretty=format:"%h %ad %an %s" {}'
+        fi
+        eval "echo $range | xargs -I {} $cmd | cat"
 
-		# Check for TEMP commit
-		commit=`git rev-list -n 1 --grep '^\*' "$range"`
-		if [ -n "$commit" ]; then
-			echo "Found TEMPORARY commit in $local_ref, not pushing"
-			exit 1
-		fi
-	fi
+        # Check for TEMP commit
+        if [ -n "$range" ]; then
+          commit=`git rev-list -n 1 --grep '^\*' "$range"`
+          if [ -n "$commit" ]; then
+              echo "Found TEMPORARY commit in $local_ref, not pushing"
+              exit 1
+          fi
+        fi
+    fi
 done
 
 exit 0
