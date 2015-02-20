@@ -46,6 +46,8 @@ inoremap '' ''<LEFT>
 set showcmd
 " バックアップなし
 set nobackup
+" 履歴ファイルを作らない
+set noundofile
 
 " 文字コード関連
 set encoding=utf-8

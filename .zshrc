@@ -185,7 +185,7 @@ if whence -p lv 2>&1 > /dev/null; then
 fi
 
 # default path
-export PATH=/usr/bin:/bin:/usr/local/bin:/Applications/adt-bundle-mac/sdk/platform-tools:/Applications/adt-bundle-mac/sdk/tools
+export PATH=/usr/bin:/bin:/usr/local/bin:/Users/yamaoka/Develop/android-sdk-macosx/platform-tools:
 
 # for Mac ports
 if [[ $os == 'mac' ]]; then
