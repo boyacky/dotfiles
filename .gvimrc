@@ -9,7 +9,7 @@ if has('gui_macvim')
   set nowrapscan               " 検索をファイルの先頭へループしない
   set transparency=20          " 透明度を指定
   set guifont=Ricty:h13        " フォント指定
-  set lines=50 columns=150     " ウィンドウサイズをセット はみだした部分は自動的に修正させて画面いっぱいに表示させる
+  set lines=70 columns=200     " ウィンドウサイズをセット はみだした部分は自動的に修正させて画面いっぱいに表示させる
 endif
 
 "表示系
@@ -25,6 +25,8 @@ set foldmethod=marker
 set nonumber
 set softtabstop=2
 set virtualedit=all
+set noswapfile
+set ruler
 
 "移動系
 nnoremap j gj
@@ -37,6 +39,11 @@ inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 inoremap <c-d> <Del>
+
+" 自動的に閉じ括弧を入力
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
 
 "引用符のセット入力時に一文字左に戻す
 inoremap "" ""<LEFT>
