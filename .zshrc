@@ -40,6 +40,9 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+# 補完の大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # fpath の追加
 fpath=(~/.zfunctions/Completion ${fpath})
 # unfunction して，autoload する

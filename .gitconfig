@@ -1,6 +1,6 @@
 [user]
-  name = Keiichiro Yamaoka
-  email = yamaoka@a-tm.co.jp
+    name = keiichiro yamaoka
+    email = yamaoka@ab-net.co.jp
 [color]
   diff = auto
   status = auto
@@ -11,7 +11,7 @@
 [push]
   default = tracking
 [core]
-  excludesfile = ~/.gitignore
+    excludesfile = /Users/yamaoka/.gitignore_global
   pager = lv -c
   editor = vim -c \"set fenc=utf-8\"
 [alias]
@@ -92,3 +92,11 @@
 [pre-push]
   cmd = git log --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset' {}
 # github config in /etc/gitconfig
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[commit]
+    template = /Users/yamaoka/.stCommitMsg
