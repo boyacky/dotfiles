@@ -58,7 +58,6 @@ inoremap <expr> ,dt strftime('%H:%M:%S')
 "-------------------------------------------------------------------------------
 " 検索設定 Search
 "-------------------------------------------------------------------------------
-
 set nowrapscan " 最後まで検索したら先頭へ戻らない
 set incsearch  " インクリメンタルサーチ
 set hlsearch   " 検索文字をハイライト
@@ -97,9 +96,6 @@ imap  <C-a> <HOME>
 "imap <C-k> <Up>
 imap <C-h> <Left>
 imap <C-l> <Right>
-
-" 前回終了したカーソル行に移動
-"autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
 " 最後に編集された位置に移動
 nnoremap gb '[

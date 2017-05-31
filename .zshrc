@@ -375,3 +375,4 @@ preexec () {
 }
 
 export GIT_HOOKS_HOME=/usr/share/git-core/Git-Hooks
+export PATH="/usr/local/bin:$PATH"

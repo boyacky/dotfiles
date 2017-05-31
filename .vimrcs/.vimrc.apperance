@@ -13,23 +13,24 @@ match ZenkakuSpace /　/
 
 " コマンド実行中は再描画しない
 :set lazyredraw
+
 "" 高速ターミナル接続を行う
 :set ttyfast
 
 "" カーソル行をハイライト
-"set cursorline
+set cursorline
+
 "" カレントウィンドウにのみ罫線を引く
-"augroup cch
-"  autocmd! cch
-"  autocmd WinLeave * set nocursorline
-"  autocmd WinEnter,BufRead * set cursorline
-"augroup END
+augroup cch
+autocmd! cch
+autocmd WinLeave * set nocursorline
+autocmd WinEnter,BufRead * set cursorline
+augroup END
 
-"" 色指定
-":hi clear CursorLine
-":hi CursorLine gui=underline
-"highlight CursorLine ctermbg=darkblue guibg=black
-
+" 色指定
+:hi clear CursorLine
+:hi CursorLine gui=underline
+highlight CursorLine ctermbg=darkblue guibg=black
 
 "-------------------------------------------------------------------------------
 " カラー関連 Colors

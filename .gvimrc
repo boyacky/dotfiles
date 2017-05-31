@@ -59,5 +59,5 @@ set noundofile
 " 文字コード関連
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8,utf-16,japan
+set fileencodings=utf-8,euc-jp,japan
 set fileformats=unix,dos,mac
