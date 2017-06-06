@@ -286,6 +286,8 @@ alias mgdir='nocorrect mkdir -m 775'
 alias rm='rm -i'
 alias history='builtin history -Di'
 alias his='history | tail'
+alias tmux='tmux -u'
+
 if [[ $use_color == 'true' ]]; then
   if [[ $os == 'mac' || $os == 'bsd' ]]; then
     alias ls='command ls -AFG'

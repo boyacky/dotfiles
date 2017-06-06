@@ -12,8 +12,9 @@
   default = tracking
 [core]
     excludesfile = /Users/yamaoka/.gitignore_global
-  pager = lv -c
+  pager = lv -c -Ou8
   editor = vim -c \"set fenc=utf-8\"
+	autocrlf = input
 [alias]
   sf = svn fetch
   sd = svn dcommit
@@ -96,7 +97,7 @@
 # github config in /etc/gitconfig
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
