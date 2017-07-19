@@ -1,6 +1,6 @@
 [user]
-    name = keiichiro yamaoka
-    email = yamaoka@ab-net.co.jp
+	name = keiichiro yamaoka
+	email = yamaoka@ab-net.co.jp
 [color]
   diff = auto
   status = auto
@@ -11,7 +11,7 @@
 [push]
   default = tracking
 [core]
-    excludesfile = /Users/yamaoka/.gitignore_global
+	excludesfile = /Users/yamaoka/.gitignore_global
   pager = lv -c -Ou8
   editor = vim -c \"set fenc=utf-8\"
 	autocrlf = input
@@ -102,4 +102,4 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-    template = /Users/yamaoka/.stCommitMsg
+	template = /Users/yamaoka/.stCommitMsg
