@@ -17,6 +17,6 @@ Bundle 'h1mesuke/unite-outline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 
-Bundle 'soh335/vim-symfony'
+"Bundle 'soh335/vim-symfony'
 
 filetype plugin indent on

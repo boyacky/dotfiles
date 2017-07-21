@@ -30,7 +30,7 @@ augroup END
 " 色指定
 :hi clear CursorLine
 :hi CursorLine gui=underline
-highlight CursorLine ctermbg=darkblue guibg=black
+highlight CursorLine ctermbg=darkgray guibg=black
 
 "-------------------------------------------------------------------------------
 " カラー関連 Colors
