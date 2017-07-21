@@ -18,7 +18,12 @@ match ZenkakuSpace /　/
 :set ttyfast
 
 "" カーソル行をハイライト
-set cursorline
+"set cursorline
+
+" 色指定
+":hi clear CursorLine
+":hi CursorLine gui=underline
+"highlight CursorLine ctermbg=darkgray guibg=black
 
 "" カレントウィンドウにのみ罫線を引く
 augroup cch
@@ -26,11 +31,6 @@ autocmd! cch
 autocmd WinLeave * set nocursorline
 autocmd WinEnter,BufRead * set cursorline
 augroup END
-
-" 色指定
-:hi clear CursorLine
-:hi CursorLine gui=underline
-highlight CursorLine ctermbg=darkgray guibg=black
 
 "-------------------------------------------------------------------------------
 " カラー関連 Colors
