@@ -27,6 +27,7 @@ set softtabstop=2
 set virtualedit=all
 set noswapfile
 set ruler
+set ambiwidth=double
 
 "移動系
 nnoremap j gj
