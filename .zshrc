@@ -201,13 +201,13 @@ else
   local rprompt_color='%{[33m%}' # yellow [0m
   local vcs_prompot_color='%{[32m%}' # green [0m
   local prompt_char='$'
-  if [[ x"$USER" == x"yamaoka" ]]; then
+  if [[ x"$USER" == x"vagrant" ]]; then
     prompt_color='%{[32m%}'      # green [0m
   elif [[ x"$USER" == x"root" ]]; then
-    prompt_color='%{[37m%}'      # white [0m
+    prompt_color='%{[35m%}'      # pink [0m
     prompt_char='#'
   else
-    prompt_color='%{[35m%}'      # pink [0m
+    prompt_color='%{[37m%}'      # white [0m
   fi
   PROMPT=$prompt_color'%U%B%n'$rprompt_color'%U@'$prompt_color'%B%m%b %h '$prompt_char$clear_color'%u '
   RPROMPT=$vcs_prompot_color'%1(v|%1v|) '$rprompt_color'[%~]''`rprompt-git-current-branch`'$clear_color
@@ -416,3 +416,6 @@ export PATH="/usr/local/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/usr/local/phpenv/bin:$PATH"
+eval "$(phpenv init -)"
