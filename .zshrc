@@ -201,7 +201,7 @@ else
   local rprompt_color='%{[33m%}' # yellow [0m
   local vcs_prompot_color='%{[32m%}' # green [0m
   local prompt_char='$'
-  if [[ x"$USER" == x"vagrant" ]]; then
+  if [[ x"$USER" == x"yamaoka" ]]; then
     prompt_color='%{[32m%}'      # green [0m
   elif [[ x"$USER" == x"root" ]]; then
     prompt_color='%{[35m%}'      # pink [0m
@@ -410,12 +410,6 @@ preexec () {
   [ ${STY} ] && echo -ne "\ek${1%% *}\e\\"
 }
 
-export GIT_HOOKS_HOME=/usr/share/git-core/Git-Hooks
-export PATH="/usr/local/bin:$PATH"
-
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export PATH="/usr/local/phpenv/bin:$PATH"
-eval "$(phpenv init -)"
+export PATH="/usr/local/bin:$PATH"
