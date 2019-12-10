@@ -321,6 +321,9 @@ alias rm='rm -i'
 alias history='builtin history -Di'
 alias his='history | tail'
 alias tmux='tmux -u'
+alias pwgen='pwgen -Bs'
+alias delds='sudo find / -name ".DS_Store" -delete'
+
 
 if [[ $use_color == 'true' ]]; then
   if [[ $os == 'mac' || $os == 'bsd' ]]; then
@@ -413,3 +416,9 @@ preexec () {
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+#eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+alias sock_proxy='sh /Users/yamaoka/.dotfiles/proxy.sh'
+alias sock_proxy_state='sh /Users/yamaoka/.dotfiles/check_proxy.sh'
+export PATH="/usr/local/sbin:$PATH"
