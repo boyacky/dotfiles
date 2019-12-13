@@ -322,8 +322,17 @@ alias history='builtin history -Di'
 alias his='history | tail'
 alias tmux='tmux -u'
 alias pwgen='pwgen -Bs'
-alias delds='sudo find / -name ".DS_Store" -delete'
+alias sl='ls'
+alias ln='ln -n'
+alias first_release="perl -mModule::CoreList -le 'print Module::CoreList->first_release(@ARGV)'"
+alias screen='command screen -U'
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias vi=vim
 
+alias delds='sudo find / -name ".DS_Store" -delete'
+alias sock_proxy='sh /Users/yamaoka/.dotfiles/proxy.sh'
+alias sock_proxy_state='sh /Users/yamaoka/.dotfiles/check_proxy.sh'
 
 if [[ $use_color == 'true' ]]; then
   if [[ $os == 'mac' || $os == 'bsd' ]]; then
@@ -340,12 +349,6 @@ else
   alias ls='command ls -AF'
   #alias ls='command ls'
 fi
-alias sl='ls'
-alias ln='ln -n'
-alias first_release="perl -mModule::CoreList -le 'print Module::CoreList->first_release(@ARGV)'"
-alias screen='command screen -U'
-alias grep='grep --color'
-alias egrep='egrep --color'
 if [[ $os == 'mac' ]]; then
   alias emacs-app='/opt/local/var/macports/software/emacs-app/23.1_1/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs'
   alias emacsclient='/opt/local/var/macports/software/emacs-app/23.1_1/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/emacsclient'
@@ -354,7 +357,6 @@ if [[ $os == 'mac' ]]; then
   alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim'
   export ANT_OPTS='-Dfile.encoding=UTF-8'
 fi
-alias vi=vim
 
 # 補完するかの質問は画面を超える時にのみに行う｡
 LISTMAX=0
@@ -416,9 +418,5 @@ preexec () {
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/opt/ncurses/bin:$PATH"
-#eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
-alias sock_proxy='sh /Users/yamaoka/.dotfiles/proxy.sh'
-alias sock_proxy_state='sh /Users/yamaoka/.dotfiles/check_proxy.sh'
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
