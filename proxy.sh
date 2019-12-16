@@ -1,11 +1,11 @@
 #!/bin/zsh
-e=$(networksetup -getsocksfirewallproxy Ethernet | grep "No")
+e=$(networksetup -getsocksfirewallproxy "Belkin USB-C LAN" | grep "No")
 if [ -n "$e" ]; then
   echo "Turning on sock_proxy"
-  networksetup -setsocksfirewallproxystate Ethernet on
+  networksetup -setsocksfirewallproxystate "Belkin USB-C LAN" on
   echo 'display notification "ON" with title "proxy.sh"'  | osascript
 else
   echo "Turning off sock_proxy"
-  networksetup -setsocksfirewallproxystate Ethernet off
+  networksetup -setsocksfirewallproxystate "Belkin USB-C LAN" off
   echo 'display notification "OFF" with title "proxy.sh"' | osascript
 fi
