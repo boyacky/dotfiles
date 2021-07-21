@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+ssh-add -K ~/.ssh/private/boyacky_key
 # -*- coding: utf-8-unix; sh-basic-offset: 2; -*-
 
 stty -ixon
@@ -420,3 +421,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export PATH="/Users/yamaoka/Library/Android/sdk/platform-tools/:$PATH"
